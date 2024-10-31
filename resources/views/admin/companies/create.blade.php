@@ -28,13 +28,13 @@
                     {{-- Card Header --}}
                     <div class="card-header {{ config('adminlte.classes_auth_header', '') }}">
                         <h3 class="card-title float-none text-center">
-                            Registro de una nueva empresa
+                            Registro de una nueva company
                         </h3>
                     </div>
 
                     {{-- Card Body --}}
                     <div class="card-body">
-                        <form action="{{ route('admin.empresas.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('admin.companies.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <!-- Logo -->
@@ -54,45 +54,45 @@
                                     <div class="row">
                                         <!-- País -->
                                         <div class="form-group col-md-4">
-                                            <label for="pais">País</label>
-                                            <select name="pais" id="select_pais" class="form-control">
-                                                @foreach ($paises as $pais)
-                                                    <option value="{{ $pais->id }}"
-                                                        {{ old('pais') == $pais->id ? 'selected' : '' }}>{{ $pais->name }}
+                                            <label for="country">País</label>
+                                            <select name="country" id="select_country" class="form-control">
+                                                @foreach ($countries as $country)
+                                                    <option value="{{ $country->id }}"
+                                                        {{ old('country') == $country->id ? 'selected' : '' }}>{{ $country->name }}
                                                     </option>
                                                 @endforeach
                                             </select>
-                                            @error('pais')
+                                            @error('country')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
-                                        <!-- Departamento/Provincia/Región -->
+                                        <!-- departmento/Provincia/Región -->
                                         <div class="form-group col-md-4">
                                             <label for="estados">Estado/Provincia/Región</label>
-                                            <div id="respuesta_pais"></div>
+                                            <div id="respuesta_country"></div>
                                         </div>
                                         <!-- Ciudad -->
                                         <div class="form-group col-md-4">
-                                            <label for="ciudad">Ciudad</label>
+                                            <label for="city">Ciudad</label>
                                             <div id="respuesta_estado"></div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <!-- Nombre de la Empresa -->
                                         <div class="form-group col-md-3">
-                                            <label for="nombre_empresa">Nombre de la Empresa</label>
-                                            <input type="text" class="form-control" id="nombre_empresa"
-                                                name="nombre_empresa" value="{{ old('nombre_empresa') }}" required>
-                                            @error('nombre_empresa')
+                                            <label for="company_name">Nombre de la Empresa</label>
+                                            <input type="text" class="form-control" id="company_name"
+                                                name="company_name" value="{{ old('company_name') }}" required>
+                                            @error('company_name')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                         <!-- Tipo de la Empresa -->
                                         <div class="form-group col-md-4">
-                                            <label for="tipo_empresa">Tipo de la Empresa</label>
-                                            <input type="text" class="form-control" id="tipo_empresa" name="tipo_empresa"
-                                                value="{{ old('tipo_empresa') }}" required>
-                                            @error('tipo_empresa')
+                                            <label for="company_type">Tipo de la Empresa</label>
+                                            <input type="text" class="form-control" id="company_type" name="company_type"
+                                                value="{{ old('company_type') }}" required>
+                                            @error('company_type')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -107,12 +107,12 @@
                                         </div>
                                         <!-- Moneda -->
                                         <div class="form-group col-md-2">
-                                            <label for="moneda">Moneda</label>
-                                            <select id="moneda" name="moneda" class="form-control">
-                                                @foreach ($monedas as $moneda)
-                                                    <option value="{{ $moneda->id }}"
-                                                        {{ old('moneda') == $moneda->symbol ? 'selected' : '' }}>
-                                                        {{ $moneda->symbol }}</option>
+                                            <label for="currency">Moneda</label>
+                                            <select id="currency" name="currency" class="form-control">
+                                                @foreach ($currencies as $currency)
+                                                    <option value="{{ $currency->id }}"
+                                                        {{ old('currency') == $currency->symbol ? 'selected' : '' }}>
+                                                        {{ $currency->symbol }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -120,37 +120,37 @@
                                     <div class="row">
                                         <!-- Nombre del impuesto -->
                                         <div class="form-group col-md-3">
-                                            <label for="nombre_impuesto">Nombre del impuesto</label>
-                                            <input type="text" class="form-control" id="nombre_impuesto"
-                                                name="nombre_impuesto" value="{{ old('nombre_impuesto') }}" required>
-                                            @error('nombre_impuesto')
+                                            <label for="tax_name">Nombre del impuesto</label>
+                                            <input type="text" class="form-control" id="tax_name"
+                                                name="tax_name" value="{{ old('tax_name') }}" required>
+                                            @error('tax_name')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                         <!-- Cantidad de impuesto -->
                                         <div class="form-group col-md-2">
-                                            <label for="cantidad_impuesto">Cantidad</label>
-                                            <input type="number" class="form-control" id="cantidad_impuesto"
-                                                name="cantidad_impuesto" value="{{ old('cantidad_impuesto') }}" required>
-                                            @error('cantidad_impuesto')
+                                            <label for="tax_amount">Cantidad</label>
+                                            <input type="number" class="form-control" id="tax_amount"
+                                                name="tax_amount" value="{{ old('tax_amount') }}" required>
+                                            @error('tax_amount')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                         <!-- Teléfonos de la Empresa -->
                                         <div class="form-group col-md-4">
-                                            <label for="telefono">Teléfonos de la Empresa</label>
-                                            <input type="text" class="form-control" id="telefono" name="telefono"
-                                                value="{{ old('telefono') }}" required>
-                                            @error('telefono')
+                                            <label for="phone">Teléfonos de la Empresa</label>
+                                            <input type="text" class="form-control" id="phone" name="phone"
+                                                value="{{ old('phone') }}" required>
+                                            @error('phone')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                         <!-- Correo de la Empresa -->
                                         <div class="form-group col-md-3">
-                                            <label for="correo">Correo de la Empresa</label>
-                                            <input type="email" class="form-control" id="correo" name="correo"
-                                                value="{{ old('correo') }}" required>
-                                            @error('correo')
+                                            <label for="email">Correo de la Empresa</label>
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                value="{{ old('email') }}" required>
+                                            @error('email')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -158,20 +158,20 @@
                                     <div class="row">
                                         <!-- Dirección -->
                                         <div class="form-group col-md-8">
-                                            <label for="direccion">Dirección</label>
-                                            <input id="pac-input" class="form-control" name="direccion" type="text"
-                                                value="{{ old('direccion') }}" placeholder="Buscar..." required>
+                                            <label for="address">Dirección</label>
+                                            <input id="pac-input" class="form-control" name="address" type="text"
+                                                value="{{ old('address') }}" placeholder="Buscar..." required>
                                             <br>
                                             <div id="map" style="width: 100%;height: 400px"></div>
                                         </div>
                                         <!-- Código Postal -->
                                         <div class="form-group col-md-4">
-                                            <label for="codigo_postal">Código Postal</label>
-                                            <select id="codigo_postal" name="codigo_postal" class="form-control">
-                                                @foreach ($paises as $pais)
-                                                    <option value="{{ $pais->phone_code }}"
-                                                        {{ old('codigo_postal') == $pais->phone_code ? 'selected' : '' }}>
-                                                        {{ $pais->phone_code }}</option>
+                                            <label for="zip_code">Código Postal</label>
+                                            <select id="zip_code" name="zip_code" class="form-control">
+                                                @foreach ($countries as $country)
+                                                    <option value="{{ $country->phone_code }}"
+                                                        {{ old('zip_code') == $country->phone_code ? 'selected' : '' }}>
+                                                        {{ $country->phone_code }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -236,51 +236,50 @@
         document.getElementById('file').addEventListener('change', archivo, false);
     </script>
     <script>
-        $('#select_pais').on('change', function() {
-            var id_pais = $('#select_pais').val();
-            var url = "{{ route('admin.empresas.buscar_estado', ':id_pais') }}";
-            url = url.replace(':id_pais', id_pais);
+        $('#select_country').on('change', function() {
+            var id_country = $('#select_country').val();
+            var url = "{{ route('admin.companies.buscar_estado', ':id_country') }}";
+            url = url.replace(':id_country', id_country);
 
-            if (id_pais) {
+            if (id_country) {
                 $.ajax({
-                    // url: "{{ url('/crear-empresa/estado') }}"+'/'+pais,
+                    // url: "{{ url('/create-company/estado') }}"+'/'+country,
                     url: url,
                     type: 'GET',
                     success: function(data) {
-                        $('#respuesta_pais').html(data);
+                        $('#respuesta_country').html(data);
                     },
                     error: function() {
-                        alert('Error al obtener datos del pais');
+                        alert('Error al obtener datos del country');
                     }
                 });
             } else {
-                $('#respuesta_pais').html('Debe selecionar un paiss');
+                $('#respuesta_country').html('Debe selecionar un countrys');
 
             }
         });
     </script>
     <script>
-        $(document).on('change', '#select_estado', function() {
-            // var id_estado = $('#select_estado').val();
+        $(document).on('change', '#select_state', function() {
             var id_estado = $(this).val();
             // alert(id_estado);
-            var url = "{{ route('admin.empresas.buscar_ciudad', ':id_estado') }}";
+            var url = "{{ route('admin.companies.buscar_city', ':id_estado') }}";
             url = url.replace(':id_estado', id_estado);
 
             if (id_estado) {
                 $.ajax({
-                    // url: "{{ url('/crear-empresa/') }}"+'/'+pais,
+                    // url: "{{ url('/create-company/') }}"+'/'+country,
                     url: url,
                     type: 'GET',
                     success: function(data) {
                         $('#respuesta_estado').html(data);
                     },
                     error: function() {
-                        alert('Error al obtener datos del pais');
+                        alert('Error al obtener datos del country');
                     }
                 });
             } else {
-                $('#respuesta_pais').html('Debe selecionar un paiss');
+                $('#respuesta_country').html('Debe selecionar un countrys');
 
             }
         });

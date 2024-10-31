@@ -13,16 +13,24 @@
             @csrf
             <div class="form-group">
                 <label for="name">Nombre</label>
-                <input type="text" name="name" class="form-control" placeholder="Ingrese el nombre de la categoría">
+                <input type="text" name="name" id="name" class="form-control" value="{{ old('name') }}" placeholder="Ingrese el nombre de la categoría">
                 
                 @error('name')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+            <div class="form-group">
+                <label for="description">Descripcion</label>
+                <input type="text" name="description" class="form-control" value="{{ old('description') }}" placeholder="Ingrese el nombre de la categoría">
+                
+                @error('description')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
 
             <div class="form-group">
                 <label for="slug">Slug</label>
-                <input type="text" name="slug" class="form-control" placeholder="Ingrese el slug de la categoría" readonly>
+                <input type="text" name="slug" id="slug" class="form-control" placeholder="Ingrese el slug de la categoría">
                 
                 @error('slug')
                     <span class="text-danger">{{ $message }}</span>
@@ -37,9 +45,10 @@
 @stop
 
 @section('js')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{{ asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js') }}"></script>
 <script>
-    $(document).ready( function() {
+    $(document).ready(function() {
         $("#name").stringToSlug({
             setEvents: 'keyup keydown blur',
             getPut: '#slug',

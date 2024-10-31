@@ -3,7 +3,7 @@
 @section('title', 'DeveloTech')
 
 @section('content_header')
-<h1>Crear Proveedor</h1>
+<h1>Proveedor</h1>
 @stop
 
 @section('content')

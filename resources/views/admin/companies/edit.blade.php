@@ -14,7 +14,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form action="{{ route('admin.empresas.update', $empresa->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.companies.update', $company->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -22,7 +22,6 @@
                     <div class="card-header">
                         <h3 class="card-title">Usuarios registrados</h3>
                         <div class="card-tools">
-                            <!-- Botón de enviar -->
                             <button type="submit" class="btn btn-primary">Actualizar Empresa</button>
                         </div>
                     </div>
@@ -37,7 +36,7 @@
                             @enderror
                             {{-- Visualizar la Imagen --}}
                             <div class="text-center">
-                                <output id="list"><img src="{{ asset('storage/' . $empresa->logo) }}" alt="logo"
+                                <output id="list"><img src="{{ asset('storage/' . $company->logo) }}" alt="logo"
                                         width="80%"></output>
                             </div>
                         </div>
@@ -45,40 +44,40 @@
                             <div class="row">
                                 <!-- País -->
                                 <div class="form-group col-md-4">
-                                    <label for="pais">País</label>
-                                    <select name="pais" id="select_pais" class="form-control">
-                                        @foreach ($paises as $pais)
-                                            <option value="{{ $pais->id }}"
-                                                {{ $empresa->pais == $pais->id ? 'selected' : '' }}>{{ $pais->name }}
+                                    <label for="country">País</label>
+                                    <select name="country" id="select_country" class="form-control">
+                                        @foreach ($countries as $country)
+                                            <option value="{{ $country->id }}"
+                                                {{ $company->country == $country->id ? 'selected' : '' }}>{{ $country->name }}
                                             </option>
                                         @endforeach
                                     </select>
-                                    @error('pais')
+                                    @error('country')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
-                                <!-- Departamento/Provincia/Región -->
+                                <!-- departmento/Provincia/Región -->
                                 <div class="form-group col-md-4">
                                     <label for="estados">Estado/Provincia/Región</label>
-                                    <select name="departamento" id="select_departamento_2" class="form-control">
-                                        @foreach ($departamentos as $departamento)
-                                            <option value="{{ $departamento->id }}"
-                                                {{ $empresa->departamento == $departamento->id ? 'selected' : '' }}>
-                                                {{ $departamento->name }}
+                                    <select name="department" id="select_department_2" class="form-control">
+                                        @foreach ($departments as $department)
+                                            <option value="{{ $department->id }}"
+                                                {{ $company->department == $department->id ? 'selected' : '' }}>
+                                                {{ $department->name }}
                                             </option>
                                         @endforeach
                                     </select>
 
-                                    <div id="respuesta_pais"></div>
+                                    <div id="respuesta_country"></div>
                                 </div>
                                 <!-- Ciudad -->
                                 <div class="form-group col-md-4">
-                                    <label for="ciudad">Ciudad</label>
-                                    <select name="ciudad" id="select_ciudad_2" class="form-control">
-                                        @foreach ($ciudades as $ciudad)
-                                            <option value="{{ $ciudad->id }}"
-                                                {{ $empresa->ciudad == $ciudad->id ? 'selected' : '' }}>
-                                                {{ $ciudad->name }}
+                                    <label for="city">Ciudad</label>
+                                    <select name="city" id="select_city_2" class="form-control">
+                                        @foreach ($cityes as $city)
+                                            <option value="{{ $city->id }}"
+                                                {{ $company->city == $city->id ? 'selected' : '' }}>
+                                                {{ $city->name }}
                                             </option>
                                         @endforeach
                                     </select>
@@ -88,19 +87,19 @@
                             <div class="row">
                                 <!-- Nombre de la Empresa -->
                                 <div class="form-group col-md-3">
-                                    <label for="nombre_empresa">Nombre de la Empresa</label>
-                                    <input type="text" class="form-control" id="nombre_empresa" name="nombre_empresa"
-                                        value="{{ $empresa->nombre_empresa }}" required>
-                                    @error('nombre_empresa')
+                                    <label for="company_name">Nombre de la Empresa</label>
+                                    <input type="text" class="form-control" id="company_name" name="company_name"
+                                        value="{{ $company->company_name }}" required>
+                                    @error('company_name')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
                                 <!-- Tipo de la Empresa -->
                                 <div class="form-group col-md-4">
-                                    <label for="tipo_empresa">Tipo de la Empresa</label>
-                                    <input type="text" class="form-control" id="tipo_empresa" name="tipo_empresa"
-                                        value="{{ $empresa->tipo_empresa }}" required>
-                                    @error('tipo_empresa')
+                                    <label for="company_type">Tipo de la Empresa</label>
+                                    <input type="text" class="form-control" id="company_type" name="company_type"
+                                        value="{{ $company->company_type }}" required>
+                                    @error('company_type')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
@@ -108,18 +107,18 @@
                                 <div class="form-group col-md-3">
                                     <label for="nit">NIT</label>
                                     <input type="text" class="form-control" id="nit" name="nit"
-                                        value="{{ $empresa->nit }}" required>
+                                        value="{{ $company->nit }}" required>
                                     @error('nit')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
                                 <!-- Moneda -->
                                 <div class="form-group col-md-2">
-                                    <label for="moneda">Moneda</label>
-                                    <select id="moneda" name="moneda" class="form-control">
-                                        @foreach ($monedas as $moneda)
-                                            <option value="{{ $moneda->id }}" {{ $empresa->moneda == $moneda->id ? 'selected' : '' }}>
-                                                {{ $moneda->symbol }}</option>
+                                    <label for="currency">Moneda</label>
+                                    <select id="currency" name="currency" class="form-control">
+                                        @foreach ($currencies as $currency)
+                                            <option value="{{ $currency->id }}" {{ $company->currency == $currency->id ? 'selected' : '' }}>
+                                                {{ $currency->symbol }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -127,37 +126,37 @@
                             <div class="row">
                                 <!-- Nombre del impuesto -->
                                 <div class="form-group col-md-3">
-                                    <label for="nombre_impuesto">Nombre del impuesto</label>
-                                    <input type="text" class="form-control" id="nombre_impuesto" name="nombre_impuesto"
-                                        value="{{ $empresa->nombre_impuesto }}" required>
-                                    @error('nombre_impuesto')
+                                    <label for="tax_name">Nombre del impuesto</label>
+                                    <input type="text" class="form-control" id="tax_name" name="tax_name"
+                                        value="{{ $company->tax_name }}" required>
+                                    @error('tax_name')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
                                 <!-- Cantidad de impuesto -->
                                 <div class="form-group col-md-2">
-                                    <label for="cantidad_impuesto">Cantidad</label>
-                                    <input type="number" class="form-control" id="cantidad_impuesto"
-                                        name="cantidad_impuesto" value="{{ $empresa->cantidad_impuesto }}" required>
-                                    @error('cantidad_impuesto')
+                                    <label for="tax_amount">Cantidad</label>
+                                    <input type="number" class="form-control" id="tax_amount"
+                                        name="tax_amount" value="{{ $company->tax_amount }}" required>
+                                    @error('tax_amount')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
                                 <!-- Teléfonos de la Empresa -->
                                 <div class="form-group col-md-4">
-                                    <label for="telefono">Teléfonos de la Empresa</label>
-                                    <input type="text" class="form-control" id="telefono" name="telefono"
-                                        value="{{ $empresa->telefono }}" required>
-                                    @error('telefono')
+                                    <label for="phone">Teléfonos de la Empresa</label>
+                                    <input type="text" class="form-control" id="phone" name="phone"
+                                        value="{{ $company->phone }}" required>
+                                    @error('phone')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
                                 <!-- Correo de la Empresa -->
                                 <div class="form-group col-md-3">
-                                    <label for="correo">Correo de la Empresa</label>
-                                    <input type="email" class="form-control" id="correo" name="correo"
-                                        value="{{ $empresa->correo }}" required>
-                                    @error('correo')
+                                    <label for="email">Correo de la Empresa</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        value="{{ $company->email }}" required>
+                                    @error('email')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
@@ -165,19 +164,19 @@
                             <div class="row">
                                 <!-- Dirección -->
                                 <div class="form-group col-md-8">
-                                    <label for="direccion">Dirección</label>
-                                    <input id="pac-input" class="form-control" name="direccion" type="text"
-                                        value="{{ $empresa->direccion }}" placeholder="Buscar..." required>
+                                    <label for="address">Dirección</label>
+                                    <input id="pac-input" class="form-control" name="address" type="text"
+                                        value="{{ $company->address }}" placeholder="Buscar..." required>
                                     <br>
                                     <div id="map" style="width: 100%;height: 400px"></div>
                                 </div>
                                 <!-- Código Postal -->
                                 <div class="form-group col-md-4">
-                                    <label for="codigo_postal">Código Postal</label>
-                                    <select id="codigo_postal" name="codigo_postal" class="form-control">
-                                        @foreach ($paises as $pais)
-                                            <option value="{{ $pais->phone_code }}" {{ $empresa->codigo_postal == $pais->phone_code ? 'selected' : '' }}>
-                                                {{ $pais->phone_code }}</option>
+                                    <label for="zip_code">Código Postal</label>
+                                    <select id="zip_code" name="zip_code" class="form-control">
+                                        @foreach ($countries as $country)
+                                            <option value="{{ $country->phone_code }}" {{ $company->zip_code == $country->phone_code ? 'selected' : '' }}>
+                                                {{ $country->phone_code }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -237,53 +236,53 @@
         document.getElementById('file').addEventListener('change', archivo, false);
     </script>
     <script>
-        $('#select_pais').on('change', function() {
-            var id_pais = $('#select_pais').val();
-            var url = "{{ route('admin.empresas.buscar_estado', ':id_pais') }}";
-            url = url.replace(':id_pais', id_pais);
+        $('#select_country').on('change', function() {
+            var id_country = $('#select_country').val();
+            var url = "{{ route('admin.companies.buscar_estado', ':id_country') }}";
+            url = url.replace(':id_country', id_country);
 
-            if (id_pais) {
+            if (id_country) {
                 $.ajax({
-                    // url: "{{ url('/crear-empresa/estado') }}"+'/'+pais,
+                    // url: "{{ url('/create-company/estado') }}"+'/'+country,
                     url: url,
                     type: 'GET',
                     success: function(data) {
-                        $('#select_departamento_2').css('display', 'none');
-                        $('#respuesta_pais').html(data);
+                        $('#select_department_2').css('display', 'none');
+                        $('#respuesta_country').html(data);
                     },
                     error: function() {
-                        alert('Error al obtener datos del pais');
+                        alert('Error al obtener datos del country');
                     }
                 });
             } else {
-                $('#respuesta_pais').html('Debe selecionar un paiss');
+                $('#respuesta_country').html('Debe selecionar un countrys');
 
             }
         });
     </script>
     <script>
-        $(document).on('change', '#select_estado', function() {
-            // var id_estado = $('#select_estado').val();
+        $(document).on('change', '#select_state', function() {
+            // var id_estado = $('#select_state').val();
             var id_estado = $(this).val();
             // alert(id_estado);
-            var url = "{{ route('admin.empresas.buscar_ciudad', ':id_estado') }}";
+            var url = "{{ route('admin.companies.buscar_city', ':id_estado') }}";
             url = url.replace(':id_estado', id_estado);
 
             if (id_estado) {
                 $.ajax({
-                    // url: "{{ url('/crear-empresa/') }}"+'/'+pais,
+                    // url: "{{ url('/create-company/') }}"+'/'+country,
                     url: url,
                     type: 'GET',
                     success: function(data) {
-                        $('#select_ciudad_2').css('display', 'none');
+                        $('#select_city_2').css('display', 'none');
                         $('#respuesta_estado').html(data);
                     },
                     error: function() {
-                        alert('Error al obtener datos del pais');
+                        alert('Error al obtener datos del country');
                     }
                 });
             } else {
-                $('#respuesta_pais').html('Debe selecionar un paiss');
+                $('#respuesta_country').html('Debe selecionar un countrys');
 
             }
         });

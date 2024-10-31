@@ -3,7 +3,7 @@
 {{-- @section('title', 'Dashboard') --}}
 
 @section('content_header')
-    {{-- <h1> <b>Bienvenido {{$nombre->nombre_empresa}} </b></h1> --}}
+    {{-- <h1> <b>Bienvenido {{$nombre->company_name}} </b></h1> --}}
     <h1> <b>Roles/Registro de un nuevo rol</b></h1>
     <hr>
 @stop
@@ -11,7 +11,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <span class="info-box-icon bg-info"><i class="fas fa-users mr-2"></i></span>
               <div class="info-box-content">
                 <span class="info-box-text">Roles registrados</span>
@@ -20,7 +20,7 @@
             </div>
           </div>
         <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <span class="info-box-icon bg-primary"><i class="fa-solid fa-user-check"></i></span>
               <div class="info-box-content">
                 <span class="info-box-text">Usuarios registrados</span>
@@ -29,7 +29,7 @@
             </div>
           </div>
         <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <span class="info-box-icon bg-success"><i class="fa-solid fa-tags"></i></span>
               <div class="info-box-content">
                 <span class="info-box-text">Categorias registradas</span>
@@ -38,7 +38,7 @@
             </div>
           </div>
         <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <span class="info-box-icon bg-warning"><i class="fa-brands fa-product-hunt"></i></span>
               <div class="info-box-content">
                 <span class="info-box-text">Productos registrados</span>
@@ -47,7 +47,7 @@
             </div>
           </div>
         <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <span class="info-box-icon bg-danger"><i class="fa-solid fa-list"></i></span>
               <div class="info-box-content">
                 <span class="info-box-text">Proveedores registrados</span>
@@ -56,7 +56,7 @@
             </div>
           </div>
         <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <span class="info-box-icon bg-info"><i class="fa-solid fa-cart-shopping"></i></span>
 
               <div class="info-box-content">
@@ -66,7 +66,7 @@
             </div>
           </div>
         <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <span class="info-box-icon bg-info"><i class="fas fa-users mr-2"></i></span>
 
               <div class="info-box-content">

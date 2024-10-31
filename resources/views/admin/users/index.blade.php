@@ -55,15 +55,17 @@
                                         <div class="btn-group" role="group" aria-label="basic example">
                                             <a href="{{ route('admin.users.show', $user->id) }}"
                                                 class="btn btn-info btn-sm"><i class="fas fa-eye"></i>
-</a>
+                                            </a>
                                             <a href="{{ route('admin.users.edit', $user->id) }}"
                                                 class="btn btn-success btn-sm"><i class="fas fa-edit"></i>
-                                                </a>
+                                            </a>
                                             <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST"
-                                                onsubmit="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">
+                                                onsubmit="return confirm('¿Estás seguro de que deseas eliminar este usuario?');"
+                                                class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                                <button type="submit" class="btn btn-danger btn-sm"><i
+                                                        class="fas fa-trash"></i></button>
                                             </form>
 
                                         </div>

@@ -9,8 +9,8 @@ class ProviderController extends Controller
 {
     public function index()
     {
-        // $categorias = provider::all();
-        return view('admin.providers.index');
+        $providers = Provider::all();
+        return view('admin.providers.index', compact('providers'));
     }
 
     public function create()

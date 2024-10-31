@@ -32,18 +32,18 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="direccion">Dirección</label><b>*</b>
-                                        <input type="text" class="form-control" name="direccion" value="{{ old('direccion') }}" required>
-                                        @error('direccion')
+                                        <label for="address">Dirección</label><b>*</b>
+                                        <input type="text" class="form-control" name="address" value="{{ old('address') }}" required>
+                                        @error('address')
                                             <small class="bg-danger text-white p-1">{{ $message }}</small>
                                         @enderror
                                     </div>
                                 </div> 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="telefono">Teléfono</label><b>*</b>
-                                        <input type="number" class="form-control" name="telefono" value="{{ old('telefono') }}" required>
-                                        @error('telefono')
+                                        <label for="phone">Teléfono</label><b>*</b>
+                                        <input type="number" class="form-control" name="phone" value="{{ old('phone') }}" required>
+                                        @error('phone')
                                             <small class="bg-danger text-white p-1">{{ $message }}</small>
                                         @enderror
                                     </div>
@@ -52,9 +52,9 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="correo">Correo</label><b>*</b>
-                                        <input type="email" class="form-control" name="correo" value="{{ old('correo') }}" required>
-                                        @error('correo')
+                                        <label for="email">Correo</label><b>*</b>
+                                        <input type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                        @error('email')
                                             <small class="bg-danger text-white p-1">{{ $message }}</small>
                                         @enderror
                                     </div>

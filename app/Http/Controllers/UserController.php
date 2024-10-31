@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     public function index()
-    {   $empresa_id = Auth::user()->empresa_id;
-        $users = User::where('empresa_id', $empresa_id)->get()  ;
+    {   $company_id = Auth::user()->company_id;
+        $users = User::where('company_id', $company_id)->get()  ;
         return view('admin.users.index', compact('users'));
     }
 
@@ -36,7 +36,7 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->empresa_id =  Auth::user()->empresa_id;
+        $user->company_id =  Auth::user()->company_id;
         $user->save();
 
         // $user->assignRole("admin");
@@ -63,11 +63,12 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|max:255|unique:users,email,'.$user->id,
+            'password' => 'confirmed',   
         ]);
     
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->empresa_id =  Auth::user()->empresa_id;
+        $user->company_id =  Auth::user()->company_id;
 
         if ($request->filled('password')) {
             $user->password = Hash::make($request['password']); //bcrypt($request->input('password'));

@@ -6,7 +6,7 @@ return [
 		'record_not_found' => 'Nessun elemento di :attribute trovato!',
 	],
 	'attributes' => [
-		'phone' => 'telefono|telefoni',
+		'phone' => 'phone|telefoni',
 		'country' => 'paese|paesi',
 		'city' => 'città|città',
 		'state' => 'stato|stati',

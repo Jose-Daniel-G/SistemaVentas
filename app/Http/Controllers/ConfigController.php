@@ -21,7 +21,7 @@ class ConfigController extends Controller
     {
         // dd($request);
         // Validación de los datos
-        $validatedData = $request->validate(['nombre' => 'required|string|', 'direccion' => 'required|string|', 'telefono' => 'required|numeric|', 'correo' => 'required|string|', 'logo' => 'required|image|mimes:jpeg,png,jpg']);
+        $validatedData = $request->validate(['nombre' => 'required|string|', 'address' => 'required|string|', 'phone' => 'required|numeric|', 'email' => 'required|string|', 'logo' => 'required|image|mimes:jpeg,png,jpg']);
 
         // Almacenar el archivo de logo y asignarlo al array
         $validatedData['logo'] = $request->file('logo')->store('logos', 'public');
@@ -29,7 +29,7 @@ class ConfigController extends Controller
         // Crear un nuevo registro en la tabla 'config'
         Config::create($validatedData);
 
-        // Redireccionar con un mensaje de éxito
+        // Readdressar con un mensaje de éxito
         return redirect()->route('admin.config.index')
             ->with('info', 'Se registró la configuración de forma correcta')
             ->with('icono', 'success');
@@ -49,17 +49,17 @@ class ConfigController extends Controller
         // Validación de los datos
         $request->validate([
             'nombre'    => 'required|string|max:255',
-            'direccion' => 'required|string|max:255',
-            'telefono'  => 'required|numeric',
-            'correo'    => 'required|email|max:255',
+            'address' => 'required|string|max:255',
+            'phone'  => 'required|numeric',
+            'email'    => 'required|email|max:255',
             'logo'      => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048' // Logo opcional pero debe ser imagen válida
         ]);
 
         // Asignación de los datos al modelo
         $config->nombre = $request->input('nombre');
-        $config->direccion = $request->input('direccion');
-        $config->telefono = $request->input('telefono');
-        $config->correo = $request->input('correo');
+        $config->address = $request->input('address');
+        $config->phone = $request->input('phone');
+        $config->email = $request->input('email');
 
         if ($request->hasFile('logo')) {
             // Eliminar el logo anterior si existe
@@ -74,7 +74,7 @@ class ConfigController extends Controller
         // Guardar los cambios
         $config->save();
 
-        // Redireccionar con mensaje de éxito
+        // Readdressar con mensaje de éxito
         // return redirect()->route('admin.config.index')->with('info', 'Configuración actualizada exitosamente');
     }
 

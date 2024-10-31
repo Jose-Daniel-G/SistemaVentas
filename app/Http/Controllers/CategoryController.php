@@ -10,7 +10,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('admin.categories.index',$categories);
+        return view('admin.categories.index',compact('categories'));
     }
 
     public function create()
@@ -20,15 +20,30 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate(["name"=> "required","slug"=> "required|unique:categories",]);
-
-        $category = Category::create($request->all());
-        return redirect()->route('admin.categories.index', $category)->with('info','La categoría se creó con éxito');
+        // Verificar todos los datos recibidos
+        // dd($request->all());
+    
+        // Validar y obtener datos válidos
+        $datos = $request->validate([
+            "name" => "required|unique:categories,name",
+            "description" => "required",
+            "slug" => "required|unique:categories,slug",
+        ]);
+    
+        // Crear la categoría
+        Category::create($datos);
+    
+        // Obtener todas las categorías para la vista
+        $categories = Category::all();
+        
+        // Devolver la vista con un mensaje de éxito
+        return view('admin.categories.index', compact('categories'))
+            ->with('info', 'La categoría se creó con éxito');
     }
-
+    
     public function show(Category $categories)
     {
-        return view('admin.categories.show',$categories);
+        return view('admin.categories.show',compact('categories'));
     }
 
     public function edit(Category $category)

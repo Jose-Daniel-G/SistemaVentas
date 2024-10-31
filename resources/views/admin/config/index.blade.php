@@ -42,9 +42,9 @@
                                 <tr>
                                     <td scope="row">{{ $contador++ }}</td>
                                     <td scope="row">{{ $config->nombre }}</td>
-                                    <td scope="row">{{ $config->direccion }}</td>
-                                    <td scope="row">{{ $config->telefono }}</td>
-                                    <td scope="row">{{ $config->correo }}</td>
+                                    <td scope="row">{{ $config->address }}</td>
+                                    <td scope="row">{{ $config->phone }}</td>
+                                    <td scope="row">{{ $config->email }}</td>
                                     <td scope="row">
                                         <img src="{{ asset('storage/' . $config->logo) }}" alt="logo" width="100">
                                     </td>

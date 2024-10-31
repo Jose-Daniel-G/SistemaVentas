@@ -20,8 +20,8 @@ return new class extends Migration
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
-            $table->unsignedBigInteger('empresa_id')->nullable();
-            $table->foreign('empresa_id')->references('id')->on('empresas')->onDelete('cascade');
+            $table->unsignedBigInteger('company_id')->nullable();
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
             $table->timestamps();
         });
 

@@ -6,12 +6,12 @@ return [
 		'record_not_found' => '¡No se encontró ningún :attribute!',
 	],
 	'attributes' => [
-		'phone' => 'teléfono|telefonos',
+		'phone' => 'teléfono|phones',
 		'country' => 'país|países',
-		'city' => 'ciudad|ciudades',
+		'city' => 'city|cityes',
 		'state' => 'estado|estados',
 		'timezone' => 'zona horaria|zonas horarias',
-		'currency' => 'divisa|monedas',
+		'currency' => 'divisa|currencies',
 		'language' => 'idioma|idiomas',
 	],
 ];

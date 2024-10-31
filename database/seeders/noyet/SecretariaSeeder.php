@@ -29,7 +29,7 @@ class SecretariaSeeder extends Seeder
             'cc' => 'secretaria@email.com',
             'celular' => '3147078256',
             'fecha_nacimiento' => '22/10/2010',
-            'direccion' => 'calle 5 o este',
+            'address' => 'calle 5 o este',
             'user_id' => '3',
         ]);
         // -------------------------------------------------

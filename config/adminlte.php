@@ -302,7 +302,7 @@ return [
         [
             'text'        => 'Configuraciones',
             // 'url' => '#',
-            'route'         => 'admin.empresa.edit',
+            'route'         => 'admin.company.edit',
             'icon' => 'fa-solid fa-gear',
         ],
 
@@ -496,22 +496,29 @@ return [
             ],
         ],
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
                 ],
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
                 ],
                 [
                     'type' => 'css',
-                    'asset' => false,
-                    'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css',
+                    // 'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css',
+                    // 'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                 ],
             ],
         ],

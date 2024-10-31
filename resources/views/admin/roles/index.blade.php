@@ -3,7 +3,7 @@
 {{-- @section('title', 'Dashboard') --}}
 
 @section('content_header')
-    {{-- <h1> <b>Bienvenido {{$nombre->nombre_empresa}} </b></h1> --}}
+    {{-- <h1> <b>Bienvenido {{$nombre->company_name}} </b></h1> --}}
     <h1> <b>Listado de roles</b></h1>
     <hr>
 @stop

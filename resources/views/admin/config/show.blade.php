@@ -28,23 +28,23 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="direccion">Direccion </label><b>*</b>
-                                    <p>{{ $config->direccion }}</p>
+                                    <label for="address">Direccion </label><b>*</b>
+                                    <p>{{ $config->address }}</p>
 
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="telefono">Telefono </label><b>*</b>
-                                    <p>{{ $config->telefono }}</p>
+                                    <label for="phone">Telefono </label><b>*</b>
+                                    <p>{{ $config->phone }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="correo">Correo </label><b>*</b>
-                                    <p>{{ $config->correo }}</p>
+                                    <label for="email">Correo </label><b>*</b>
+                                    <p>{{ $config->email }}</p>
 
                                 </div>
                             </div>

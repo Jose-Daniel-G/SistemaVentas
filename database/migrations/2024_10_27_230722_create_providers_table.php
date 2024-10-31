@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('providers', function (Blueprint $table) {
             $table->id();
+            $table->string('company');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('name');
+            $table->integer('cellphone');
+
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
