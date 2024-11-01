@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Shopping extends Model
 {
     use HasFactory;
+
+    public function details(){
+        return $this->belongsTo(DetailShopping::class);
+    }
+
 }

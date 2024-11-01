@@ -61,7 +61,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Compras registradas</span>
-                <span class="info-box-number">{{ $total_shop}}</span>
+                <span class="info-box-number">{{ $total_shopping}}</span>
               </div>
             </div>
           </div>

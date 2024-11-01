@@ -16,7 +16,7 @@
         <div class="card-header"><a href="{{ route('admin.customers.create') }}" class="btn btn-secondary">Agregar
                 Categoría</a></div>
         <div class="card-body">
-            <table class="table table-striped">
+            <table class="table table-striped table-hover table-bordered table-sm">
                 <thead>
                     <tr>
                         <th>Nro</th>
@@ -38,7 +38,7 @@
                             </td>
                             <td width="10px">
                                 <form action="{{ route('admin.categories.destroy', $category) }}" method="post"
-                                    onclick="ask{{ $category->id }}(event)" id="miForm{{ $shop->id }}"">
+                                    onclick="ask{{ $category->id }}(event)" id="miForm{{ $shopping->id }}"">
                                     @csrf
                                     @method('delete')
                                     <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
@@ -53,7 +53,7 @@
 @stop
 @section('js')
     <script>
-        function ask{{ $shop->id }}(event) {
+        function ask{{ $shopping->id }}(event) {
             event.preventDefault();
             Swal.fire({
                 title: "Desea eliminar este registro",
@@ -66,9 +66,9 @@
                 confirmButtonText: 'Cancelar',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    var form = $('#miForm{{ $shop->id }}');
+                    var form = $('#miForm{{ $shopping->id }}');
                     form.submit();
-                    // document.getElementById('form-' + $shop->id).submit();
+                    // document.getElementById('form-' + $shopping->id).submit();
                 } else if (result.isDenied) {
                     Swal.fire('Registro cancelado', '', 'info');
                 }

@@ -14,6 +14,6 @@ class Product extends Model
     }
 
     public function shopping(){
-        return $this->belongsTo(Shopping::class);
+        return $this->belongsTo(Shop::class);
     }
 }

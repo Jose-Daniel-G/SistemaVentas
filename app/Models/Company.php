@@ -9,7 +9,14 @@ class Company extends Model
 {
     use HasFactory;
 
+    // Relationship with users
     public function users(){
-        return $this->hasMany(User::class);}
-    
+        return $this->hasMany(User::class);
+    }
+
+    // Relationship with providers
+    public function providers() {
+        return $this->hasMany(Provider::class);
+    }
 }
+

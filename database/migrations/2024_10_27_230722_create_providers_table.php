@@ -15,13 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('company');
             $table->string('address');
-            $table->string('phone');
+            $table->string('phone'); 
             $table->string('email');
             $table->string('name');
             $table->integer('cellphone');
-
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->unsignedBigInteger('company_id');
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
             $table->timestamps();
         });
     }

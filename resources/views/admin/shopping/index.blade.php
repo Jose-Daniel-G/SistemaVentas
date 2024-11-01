@@ -46,7 +46,7 @@
                             <table id="shopping" class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Nro</th>
                                         <th>Producto</th>
                                         <th>Fecha</th>
                                         <th>Proveedor</th>
@@ -68,7 +68,7 @@
                                             </td>
                                             <td width="10px">
                                                 <form action="{{ route('admin.shopping.destroy', $shops) }}" method="post"
-                                                    onclick="preguntar{{ $shop->id}}(event)" id="miFormulario{{ $shop->id}}">
+                                                    onclick="preguntar{{ $shopping->id}}(event)" id="miFormulario{{ $shopping->id}}">
                                                     @csrf
                                                     @method('delete')
                                                     <button class="btn btn-danger btn-sm"><i
@@ -81,27 +81,7 @@
                             </table>
                         </div>
 
-                        <!-- Sección derecha -->
-                        <div class="col-md-4">
-                            <div class="d-grid mb-3">
-                                <button class="btn btn-primary">Buscar proveedor</button>
-                                <button class="btn btn-secondary mt-2">Proveedor 2</button>
-                            </div>
-                            <div class="mb-3">
-                                <label for="fecha-compra" class="form-label">Fecha de compra *</label>
-                                <input type="date" class="form-control" id="fecha-compra" value="2024-10-15">
-                            </div>
-                            <div class="mb-3">
-                                <label for="comprobante" class="form-label">Comprobante *</label>
-                                <input type="text" class="form-control" id="comprobante" placeholder="Factura 0001224">
-                            </div>
-                            <div class="mb-3">
-                                <label for="precio-total" class="form-label">Precio total *</label>
-                                <input type="text" class="form-control highlighted" id="precio-total" value="515.55"
-                                    readonly>
-                            </div>
-                            <button class="btn btn-success w-100">Actualizar compra</button>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
@@ -109,18 +89,16 @@
     </div>
 @stop
 @section('js')
-<script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script>
-<script src="https://cdn.datatables.net/2.1.5/js/dataTables.bootstrap4.js"></script>
-<script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.js"></script>
+<script src="https://"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 <!-- Buttons JS -->
-<script src="https://cdn.datatables.net/buttons/2.3.0/js/dataTables.buttons.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.3.0/js/buttons.flash.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.3.0/js/buttons.html5.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.3.0/js/buttons.print.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.3.0/js/buttons.colVis.min.js"></script>
+<script src="https://"></script>
+<script src="https://"></script>
+<script src="https://"></script>
+<script src="https:"></script>
+<script src="https:"></script>
+<script src="https://"></script>
 <script>
     new DataTable('#shopping', {
         responsive: true,
@@ -165,7 +143,7 @@
     // }
 </script>
     <script>
-        function preguntar{{ $shop->id }}(event) {
+        function preguntar{{ $shopping->id }}(event) {
             event.preventDefault();
             Swal.fire({
                 title: "Desea eliminar este registro",
@@ -178,9 +156,9 @@
                 confirmButtonText: 'Cancelar',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    var form = $('#miFormulario{{$shop->id}}');
+                    var form = $('#miFormulario{{$shopping->id}}');
                     form.submit();
-                    // document.getElementById('form-' + $shop->id).submit();
+                    // document.getElementById('form-' + $shopping->id).submit();
                 } else if (result.isDenied) {
                     Swal.fire('Registro cancelado', '', 'info');
                 }

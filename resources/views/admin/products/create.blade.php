@@ -12,7 +12,7 @@
             <h3 class="card-title">Datos registrados</h3>
         </div>
         <div class="card-body">
-            <form action="{{ route('admin.products.store') }}" method="POST">
+            <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     <div class="col-md-3">

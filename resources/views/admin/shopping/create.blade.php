@@ -7,73 +7,179 @@
 @stop
 
 @section('content')
-    <div class="card">
+<div class="card card-outline card-primary">
+    <div class="card-header">
+        <h3 class="card-title">LLene los campos</h3>
+    </div>
         <div class="card-body">
             <form action="{{ route('admin.shopping.store') }}" method="POST">
                 @csrf
+
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-2">
                         <div class="form-group">
                             <label for="amount">Cantidad</label>
-                            <input type="number" name="amount" id="amount" class="form-control"
-                                values="{{ old('amount') }}" placeholder="Ingrese el amount de la categoría" readonly>
-
+                            <input type="number" name="amount" id="amount" class="form-control bg-warning"
+                                value="{{ old('amount') }}" placeholder="Ingrese la cantidad">
                             @error('amount')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
-                    <div class="col-8">
+
+                    <div class="col-6">
+                        <label for="email">Email</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-barcode"></i></span>
+                            </div>
+                            <input type="email" name="email" class="form-control" placeholder="Email"
+                                value="{{ old('email') }}">
+                        </div>
+                        @error('email')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModal"><i class="fas fa-search"></i></button>
+                            <a href="{{ route('admin.products.create')}}" class="btn btn-success" ><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
                         <div class="form-group">
                             <label for="date">Fecha</label>
                             <input type="date" name="date" id="date" class="form-control"
-                                values="{{ old('date') }}" placeholder="Ingrese el nombre de la categoría">
-
+                                value="{{ old('date') }}" placeholder="Ingrese la fecha">
                             @error('date')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
-
                 </div>
-
-
-                <div class="form-group">
-                    <label for="voucher">Comprobante</label>
-                    <input type="text" name="voucher" id="voucher" class="form-control" values="{{ old('voucher') }}"
-                        placeholder="Ingrese el voucher de la categoría" readonly>
-
-                    @error('voucher')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table-striped table-bordered table-sm table-hover">
+                            <thead>
+                                <tr style="background-color: #767c7efb">
+                                    <th>Nro</th>
+                                    <th>Codigo</th>
+                                    <th>Nombre</th>
+                                    <th>Costo</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Aquí puedes añadir los datos de la tabla -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-        </div>
-        <div class="form-group">
-            <label for="purchase_sale">Venta</label>
-            <input type="text" name="purchase_sale" id="purchase_sale" class="form-control"
-                values="{{ old('purchase_sale') }}" placeholder="Ingrese el purchase_sale de la categoría" readonly>
+                <button type="submit" class="btn btn-primary">Crear categoría</button>
+            </form>
 
-            @error('purchase_sale')
-                <span class="text-danger">{{ $message }}</span>
-            @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary">Crear categoría</button>
-        </form>
-    </div>
-    </div>
 
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table id="products" class="table table-striped table-bordered table-hover table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Nro</th>
+                                <th>Accion</th>
+                                <th>Codigo</th>
+                                <th>Nombre</th>
+                                <th>Descripcion</th>
+                                <th>Stock</th>
+                                <th>Precio compra</th>
+                                <th>Precio venta</th>
+                                <th>Imagen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $contador = 1; ?>
+                            @foreach ($products as $product)
+                                <tr>
+                                    <td>{{ $contador++ }}</td>
+                                    <td><button type="button" class="btn btn-info">Seleccionar</button></td>
+                                    <td>{{ $product->code }}</td>
+                                    <td>{{ $product->name }}</td>
+                                    <td>{{ $product->description }}</td>
+                                    <td style=" background-color: #eadaa8">{{ $product->stock }}</td>
+                                    <td>{{ $product->purchase_price }}</td>
+                                    <td>{{ $product->sale_price }}</td>
+
+                                    <td><img src="{{ asset('storage/' . $product->image) }}" width="80px" alt="logo">
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 @stop
 
 @section('js')
-    <script src="{{ asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js') }}"></script>
     <script>
-        $(document).ready(function() {
-            $("#name").stringToSlug({
-                setEvents: 'keyup keydown blur',
-                getPut: '#voucher',
-                space: '-'
-            });
+        new DataTable('#products', {
+            responsive: true,
+            autoWidth: false,
+            // dom: 'Bfrtip',
+            // buttons: ['copy', 'csv', 'excel', 'pdf', 'print', 'colvis'],
+            pageLength: 5,
+            language: {
+                decimal: "",
+                emptyTable: "No hay datos disponibles en la tabla",
+                info: "Mostrando _START_ a _END_ de _TOTAL_ productos",
+                infoEmpty: "Mostrando 0 a 0 de 0 productos",
+                infoFiltered: "(filtrado de _MAX_ productos totales)",
+                lengthMenu: "Mostrar _MENU_ productos",
+                loadingRecords: "Cargando...",
+                search: "Buscar:",
+                zeroRecords: "No se encontraron registros coincidentes",
+                paginate: {
+                    first: "Primero",
+                    last: "Último",
+                    next: "Siguiente",
+                    previous: "Anterior"
+                }
+            }
         });
+
+        function confirmDelete(id) {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡No podrás revertir esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, eliminar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Enviar el formulario si el usuario confirma
+                    document.getElementById('delete-form-' + id).submit();
+                }
+            });
+        }
     </script>
 @endsection

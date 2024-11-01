@@ -40211,15 +40211,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #007bff;
 }
 
-.pace-barber-shop-primary .pace {
+.pace-barber-shopping-primary .pace {
   background: #fff;
 }
 
-.pace-barber-shop-primary .pace .pace-progress {
+.pace-barber-shopping-primary .pace .pace-progress {
   background: #007bff;
 }
 
-.pace-barber-shop-primary .pace .pace-activity {
+.pace-barber-shopping-primary .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -40342,15 +40342,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #6c757d;
 }
 
-.pace-barber-shop-secondary .pace {
+.pace-barber-shopping-secondary .pace {
   background: #fff;
 }
 
-.pace-barber-shop-secondary .pace .pace-progress {
+.pace-barber-shopping-secondary .pace .pace-progress {
   background: #6c757d;
 }
 
-.pace-barber-shop-secondary .pace .pace-activity {
+.pace-barber-shopping-secondary .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -40473,15 +40473,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #28a745;
 }
 
-.pace-barber-shop-success .pace {
+.pace-barber-shopping-success .pace {
   background: #fff;
 }
 
-.pace-barber-shop-success .pace .pace-progress {
+.pace-barber-shopping-success .pace .pace-progress {
   background: #28a745;
 }
 
-.pace-barber-shop-success .pace .pace-activity {
+.pace-barber-shopping-success .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -40604,15 +40604,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #17a2b8;
 }
 
-.pace-barber-shop-info .pace {
+.pace-barber-shopping-info .pace {
   background: #fff;
 }
 
-.pace-barber-shop-info .pace .pace-progress {
+.pace-barber-shopping-info .pace .pace-progress {
   background: #17a2b8;
 }
 
-.pace-barber-shop-info .pace .pace-activity {
+.pace-barber-shopping-info .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -40735,15 +40735,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #ffc107;
 }
 
-.pace-barber-shop-warning .pace {
+.pace-barber-shopping-warning .pace {
   background: #1f2d3d;
 }
 
-.pace-barber-shop-warning .pace .pace-progress {
+.pace-barber-shopping-warning .pace .pace-progress {
   background: #ffc107;
 }
 
-.pace-barber-shop-warning .pace .pace-activity {
+.pace-barber-shopping-warning .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(31, 45, 61, 0.2) 25%, transparent 25%, transparent 50%, rgba(31, 45, 61, 0.2) 50%, rgba(31, 45, 61, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -40866,15 +40866,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #dc3545;
 }
 
-.pace-barber-shop-danger .pace {
+.pace-barber-shopping-danger .pace {
   background: #fff;
 }
 
-.pace-barber-shop-danger .pace .pace-progress {
+.pace-barber-shopping-danger .pace .pace-progress {
   background: #dc3545;
 }
 
-.pace-barber-shop-danger .pace .pace-activity {
+.pace-barber-shopping-danger .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -40997,15 +40997,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #f8f9fa;
 }
 
-.pace-barber-shop-light .pace {
+.pace-barber-shopping-light .pace {
   background: #1f2d3d;
 }
 
-.pace-barber-shop-light .pace .pace-progress {
+.pace-barber-shopping-light .pace .pace-progress {
   background: #f8f9fa;
 }
 
-.pace-barber-shop-light .pace .pace-activity {
+.pace-barber-shopping-light .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(31, 45, 61, 0.2) 25%, transparent 25%, transparent 50%, rgba(31, 45, 61, 0.2) 50%, rgba(31, 45, 61, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -41128,15 +41128,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #343a40;
 }
 
-.pace-barber-shop-dark .pace {
+.pace-barber-shopping-dark .pace {
   background: #fff;
 }
 
-.pace-barber-shop-dark .pace .pace-progress {
+.pace-barber-shopping-dark .pace .pace-progress {
   background: #343a40;
 }
 
-.pace-barber-shop-dark .pace .pace-activity {
+.pace-barber-shopping-dark .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -41259,15 +41259,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #3c8dbc;
 }
 
-.pace-barber-shop-lightblue .pace {
+.pace-barber-shopping-lightblue .pace {
   background: #fff;
 }
 
-.pace-barber-shop-lightblue .pace .pace-progress {
+.pace-barber-shopping-lightblue .pace .pace-progress {
   background: #3c8dbc;
 }
 
-.pace-barber-shop-lightblue .pace .pace-activity {
+.pace-barber-shopping-lightblue .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -41390,15 +41390,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #001f3f;
 }
 
-.pace-barber-shop-navy .pace {
+.pace-barber-shopping-navy .pace {
   background: #fff;
 }
 
-.pace-barber-shop-navy .pace .pace-progress {
+.pace-barber-shopping-navy .pace .pace-progress {
   background: #001f3f;
 }
 
-.pace-barber-shop-navy .pace .pace-activity {
+.pace-barber-shopping-navy .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -41521,15 +41521,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #3d9970;
 }
 
-.pace-barber-shop-olive .pace {
+.pace-barber-shopping-olive .pace {
   background: #fff;
 }
 
-.pace-barber-shop-olive .pace .pace-progress {
+.pace-barber-shopping-olive .pace .pace-progress {
   background: #3d9970;
 }
 
-.pace-barber-shop-olive .pace .pace-activity {
+.pace-barber-shopping-olive .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -41652,15 +41652,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #01ff70;
 }
 
-.pace-barber-shop-lime .pace {
+.pace-barber-shopping-lime .pace {
   background: #1f2d3d;
 }
 
-.pace-barber-shop-lime .pace .pace-progress {
+.pace-barber-shopping-lime .pace .pace-progress {
   background: #01ff70;
 }
 
-.pace-barber-shop-lime .pace .pace-activity {
+.pace-barber-shopping-lime .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(31, 45, 61, 0.2) 25%, transparent 25%, transparent 50%, rgba(31, 45, 61, 0.2) 50%, rgba(31, 45, 61, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -41783,15 +41783,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #f012be;
 }
 
-.pace-barber-shop-fuchsia .pace {
+.pace-barber-shopping-fuchsia .pace {
   background: #fff;
 }
 
-.pace-barber-shop-fuchsia .pace .pace-progress {
+.pace-barber-shopping-fuchsia .pace .pace-progress {
   background: #f012be;
 }
 
-.pace-barber-shop-fuchsia .pace .pace-activity {
+.pace-barber-shopping-fuchsia .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -41914,15 +41914,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #d81b60;
 }
 
-.pace-barber-shop-maroon .pace {
+.pace-barber-shopping-maroon .pace {
   background: #fff;
 }
 
-.pace-barber-shop-maroon .pace .pace-progress {
+.pace-barber-shopping-maroon .pace .pace-progress {
   background: #d81b60;
 }
 
-.pace-barber-shop-maroon .pace .pace-activity {
+.pace-barber-shopping-maroon .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -42045,15 +42045,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #007bff;
 }
 
-.pace-barber-shop-blue .pace {
+.pace-barber-shopping-blue .pace {
   background: #fff;
 }
 
-.pace-barber-shop-blue .pace .pace-progress {
+.pace-barber-shopping-blue .pace .pace-progress {
   background: #007bff;
 }
 
-.pace-barber-shop-blue .pace .pace-activity {
+.pace-barber-shopping-blue .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -42176,15 +42176,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #6610f2;
 }
 
-.pace-barber-shop-indigo .pace {
+.pace-barber-shopping-indigo .pace {
   background: #fff;
 }
 
-.pace-barber-shop-indigo .pace .pace-progress {
+.pace-barber-shopping-indigo .pace .pace-progress {
   background: #6610f2;
 }
 
-.pace-barber-shop-indigo .pace .pace-activity {
+.pace-barber-shopping-indigo .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -42307,15 +42307,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #6f42c1;
 }
 
-.pace-barber-shop-purple .pace {
+.pace-barber-shopping-purple .pace {
   background: #fff;
 }
 
-.pace-barber-shop-purple .pace .pace-progress {
+.pace-barber-shopping-purple .pace .pace-progress {
   background: #6f42c1;
 }
 
-.pace-barber-shop-purple .pace .pace-activity {
+.pace-barber-shopping-purple .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -42438,15 +42438,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #e83e8c;
 }
 
-.pace-barber-shop-pink .pace {
+.pace-barber-shopping-pink .pace {
   background: #fff;
 }
 
-.pace-barber-shop-pink .pace .pace-progress {
+.pace-barber-shopping-pink .pace .pace-progress {
   background: #e83e8c;
 }
 
-.pace-barber-shop-pink .pace .pace-activity {
+.pace-barber-shopping-pink .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -42569,15 +42569,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #dc3545;
 }
 
-.pace-barber-shop-red .pace {
+.pace-barber-shopping-red .pace {
   background: #fff;
 }
 
-.pace-barber-shop-red .pace .pace-progress {
+.pace-barber-shopping-red .pace .pace-progress {
   background: #dc3545;
 }
 
-.pace-barber-shop-red .pace .pace-activity {
+.pace-barber-shopping-red .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -42700,15 +42700,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #fd7e14;
 }
 
-.pace-barber-shop-orange .pace {
+.pace-barber-shopping-orange .pace {
   background: #1f2d3d;
 }
 
-.pace-barber-shop-orange .pace .pace-progress {
+.pace-barber-shopping-orange .pace .pace-progress {
   background: #fd7e14;
 }
 
-.pace-barber-shop-orange .pace .pace-activity {
+.pace-barber-shopping-orange .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(31, 45, 61, 0.2) 25%, transparent 25%, transparent 50%, rgba(31, 45, 61, 0.2) 50%, rgba(31, 45, 61, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -42831,15 +42831,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #ffc107;
 }
 
-.pace-barber-shop-yellow .pace {
+.pace-barber-shopping-yellow .pace {
   background: #1f2d3d;
 }
 
-.pace-barber-shop-yellow .pace .pace-progress {
+.pace-barber-shopping-yellow .pace .pace-progress {
   background: #ffc107;
 }
 
-.pace-barber-shop-yellow .pace .pace-activity {
+.pace-barber-shopping-yellow .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(31, 45, 61, 0.2) 25%, transparent 25%, transparent 50%, rgba(31, 45, 61, 0.2) 50%, rgba(31, 45, 61, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -42962,15 +42962,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #28a745;
 }
 
-.pace-barber-shop-green .pace {
+.pace-barber-shopping-green .pace {
   background: #fff;
 }
 
-.pace-barber-shop-green .pace .pace-progress {
+.pace-barber-shopping-green .pace .pace-progress {
   background: #28a745;
 }
 
-.pace-barber-shop-green .pace .pace-activity {
+.pace-barber-shopping-green .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -43093,15 +43093,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #20c997;
 }
 
-.pace-barber-shop-teal .pace {
+.pace-barber-shopping-teal .pace {
   background: #fff;
 }
 
-.pace-barber-shop-teal .pace .pace-progress {
+.pace-barber-shopping-teal .pace .pace-progress {
   background: #20c997;
 }
 
-.pace-barber-shop-teal .pace .pace-activity {
+.pace-barber-shopping-teal .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -43224,15 +43224,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #17a2b8;
 }
 
-.pace-barber-shop-cyan .pace {
+.pace-barber-shopping-cyan .pace {
   background: #fff;
 }
 
-.pace-barber-shop-cyan .pace .pace-progress {
+.pace-barber-shopping-cyan .pace .pace-progress {
   background: #17a2b8;
 }
 
-.pace-barber-shop-cyan .pace .pace-activity {
+.pace-barber-shopping-cyan .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -43355,15 +43355,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #fff;
 }
 
-.pace-barber-shop-white .pace {
+.pace-barber-shopping-white .pace {
   background: #1f2d3d;
 }
 
-.pace-barber-shop-white .pace .pace-progress {
+.pace-barber-shopping-white .pace .pace-progress {
   background: #fff;
 }
 
-.pace-barber-shop-white .pace .pace-activity {
+.pace-barber-shopping-white .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(31, 45, 61, 0.2) 25%, transparent 25%, transparent 50%, rgba(31, 45, 61, 0.2) 50%, rgba(31, 45, 61, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -43486,15 +43486,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #6c757d;
 }
 
-.pace-barber-shop-gray .pace {
+.pace-barber-shopping-gray .pace {
   background: #fff;
 }
 
-.pace-barber-shop-gray .pace .pace-progress {
+.pace-barber-shopping-gray .pace .pace-progress {
   background: #6c757d;
 }
 
-.pace-barber-shop-gray .pace .pace-activity {
+.pace-barber-shopping-gray .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
@@ -43617,15 +43617,15 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   background: #343a40;
 }
 
-.pace-barber-shop-gray-dark .pace {
+.pace-barber-shopping-gray-dark .pace {
   background: #fff;
 }
 
-.pace-barber-shop-gray-dark .pace .pace-progress {
+.pace-barber-shopping-gray-dark .pace .pace-progress {
   background: #343a40;
 }
 
-.pace-barber-shop-gray-dark .pace .pace-activity {
+.pace-barber-shopping-gray-dark .pace .pace-activity {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 

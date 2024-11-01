@@ -888,7 +888,7 @@ readers do not read off random characters that represent icons */
 .fa-chess:before {
   content: "\f439"; }
 
-.fa-chess-bishop:before {
+.fa-chess-bishopping:before {
   content: "\f43a"; }
 
 .fa-chess-board:before {
@@ -3462,7 +3462,7 @@ readers do not read off random characters that represent icons */
 .fa-shoe-prints:before {
   content: "\f54b"; }
 
-.fa-shopify:before {
+.fa-shoppingify:before {
   content: "\e057"; }
 
 .fa-shopping-bag:before {
@@ -3474,7 +3474,7 @@ readers do not read off random characters that represent icons */
 .fa-shopping-cart:before {
   content: "\f07a"; }
 
-.fa-shopware:before {
+.fa-shoppingware:before {
   content: "\f5b5"; }
 
 .fa-shower:before {

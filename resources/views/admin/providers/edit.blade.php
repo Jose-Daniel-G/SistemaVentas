@@ -7,16 +7,14 @@
 @stop
 
 @section('content')
-    <div class="card card-outline card-primary">
-        <div class="card-header">
-            <h3 class="card-title">Datos registrados</h3>
-        </div>
+<div class="card">
     <div class="card-body">
-        <form action="{{ route('admin.providers.store') }}" method="POST">
+        <form action="{{ route('admin.providers.update', $providers) }}" method="POST">
             @csrf
+            @method('PUT');
             <div class="form-group">
                 <label for="company">Empresa</label><b>*</b>
-                <input value="{{ old('company')}}" type="text" name="company" class="form-control" placeholder="Ingrese el nombre de la empresa">
+                <input value="{{ $provider->company}}" type="text" name="company" class="form-control" placeholder="Ingrese el nombre de la empresa">
                 
                 @error('company')
                     <span class="text-danger">{{ $message }}</span>
@@ -24,7 +22,7 @@
             </div>
             <div class="form-group">
                 <label for="name">Proveedor</label><b>*</b>
-                <input value="{{ old('name')}}" type="text" name="name" class="form-control" placeholder="Ingrese el proveedor de la empresa">
+                <input value="{{ $provider->name}}" type="text" name="name" class="form-control" placeholder="Ingrese el proveedor de la empresa">
                 
                 @error('company')
                     <span class="text-danger">{{ $message }}</span>
@@ -32,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="address">Direccion</label><b>*</b>
-                <input value="{{ old('address')}}" type="text" name="address" class="form-control" placeholder="Ingrese la direccion de la empresa">
+                <input value="{{ $provider->address}}" type="text" name="address" class="form-control" placeholder="Ingrese la direccion de la empresa">
                 
                 @error('address')
                     <span class="text-danger">{{ $message }}</span>
@@ -40,7 +38,7 @@
             </div>
             <div class="form-group">
                 <label for="phone">Telefono</label><b>*</b>
-                <input value="{{ old('phone')}}" type="text" name="phone" class="form-control" placeholder="Ingrese el celular de la empresa">
+                <input value="{{ $provider->phone}}" type="text" name="phone" class="form-control" placeholder="Ingrese el celular de la empresa">
                 
                 @error('phone')
                     <span class="text-danger">{{ $message }}</span>
@@ -48,7 +46,7 @@
             </div>
             <div class="form-group">
                 <label for="cellphone">Celular</label><b>*</b>
-                <input value="{{ old('cellphone')}}" type="text" name="cellphone" class="form-control" placeholder="Ingrese el celular de la empresa">
+                <input value="{{ $provider->cellphone}}" type="text" name="cellphone" class="form-control" placeholder="Ingrese el celular de la empresa">
                 
                 @error('cellphone')
                     <span class="text-danger">{{ $message }}</span>
@@ -57,7 +55,7 @@
 
             <div class="form-group">
                 <label for="email">Correo</label><b>*</b>
-                <input value="{{ old('email')}}" type="text" name="email" class="form-control" placeholder="Ingrese el email de la company">
+                <input value="{{ $provider->email}}" type="text" name="email" class="form-control" placeholder="Ingrese el email de la company">
                 
                 @error('email')
                     <span class="text-danger">{{ $message }}</span>
@@ -65,7 +63,7 @@
             </div>
             <button class="btn btn-secondary" onclick="history.back()">Regresar</button>
             
-            <button type="submit" class="btn btn-primary">Crear proveedor</button>
+            <button type="submit" class="btn btn-primary">Actualizar proveedor</button>
         </form>
     </div>
 </div>
