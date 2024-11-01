@@ -11,10 +11,10 @@ return new class extends Migration
         Schema::create('detail_shoppings', function (Blueprint $table) {
             $table->id();
             $table->integer('amount');
-            $table->double('purchase_sale');
+            $table->double('purchase_price');
 
-            $table->unsignedBigInteger('purchase_id')->nullable();
-            $table->foreign('purchase_id')->references('id')->on('shoppings')->onDelete('cascade');
+            $table->unsignedBigInteger('shopping_id')->nullable();
+            $table->foreign('shopping_id')->references('id')->on('shoppings')->onDelete('cascade');
             $table->unsignedBigInteger('product_id')->nullable();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->unsignedBigInteger('provider_id')->nullable();

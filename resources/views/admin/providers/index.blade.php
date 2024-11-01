@@ -30,10 +30,11 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $contador = 1; ?>
                     @foreach ($providers as $provider)
                         <tr>
                             {{-- <td>dd({{ $provider }})</td> --}}
-                            <td>{{ $provider->id }}</td>
+                            <td>{{ $contador++ }}</td>
                             <td>{{ $provider->company }}</td>
                             <td>{{ $provider->address }}</td>
                             <td>{{ $provider->phone }}</td>

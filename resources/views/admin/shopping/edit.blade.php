@@ -49,11 +49,11 @@
                 </div>
         </div>
         <div class="form-group">
-            <label for="purchase_sale">Venta</label>
-            <input type="text" name="purchase_sale" id="purchase_sale" class="form-control"
-                values="{{ old('purchase_sale') }}" placeholder="Ingrese el purchase_sale de la categoría" readonly>
+            <label for="shopping_id">Venta</label>
+            <input type="text" name="shopping_id" id="shopping_id" class="form-control"
+                values="{{ old('shopping_id') }}" placeholder="Ingrese el shopping_id de la categoría" readonly>
 
-            @error('purchase_sale')
+            @error('shopping_id')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
         </div>

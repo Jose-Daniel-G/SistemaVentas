@@ -48,8 +48,10 @@ class ProviderController extends Controller
           // Save the category to the database
           $provider->save();
         $providers= Provider::all();
+        $company = Company::where('id',Auth::user()->company_id)->first();
+
           // Handle success or redirect to desired location
-        return view('admin.providers.index', compact('providers'))->with('success', 'Category created successfully!');
+        return view('admin.providers.index', compact('providers','company'))->with('success', 'Category created successfully!');
     }
 
     public function show(Provider $provider)

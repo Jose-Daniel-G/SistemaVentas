@@ -12,5 +12,11 @@ class Shopping extends Model
     public function details(){
         return $this->belongsTo(DetailShopping::class);
     }
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
+    public function provider(){
+        return $this->hasMany(Provider::class);
+    }
 
 }

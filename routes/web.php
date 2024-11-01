@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ShoppingController;
+use App\Http\Controllers\TmpShoppingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -80,3 +81,8 @@ Route::resource('/products', ProductController::class)->names('admin.products');
 Route::resource('/providers', ProviderController::class)->names('admin.providers');
 //RUTAS shopping ADMIN
 Route::resource('/shopping', ShoppingController::class)->names('admin.shopping');
+
+//RUTAS tmp_shopping ADMIN
+Route::resource('/tmp_shopping', TmpShoppingController::class)->names('admin.shopping.tmp_shopping');
+//RUTAS tmp_shopping ADMIN
+Route::post('/tmp_shopping', [TmpShoppingController::class, 'tmp_shopping'])->name('admin.shopping.tmp_shopping');
